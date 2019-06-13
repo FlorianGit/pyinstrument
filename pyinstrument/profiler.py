@@ -100,6 +100,9 @@ class Profiler(object):
     def output_html(self, root=None):
         return renderers.HTMLRenderer().render(self.last_session)
 
+    def output_json(self):
+        return renderers.JSONRenderer().render(self.last_session)
+
     def open_in_browser(self):
         return renderers.HTMLRenderer().open_in_browser(self.last_session)
 
